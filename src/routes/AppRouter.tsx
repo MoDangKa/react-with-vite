@@ -1,16 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Product from "@/pages/Product";
-import NotFound from "@/pages/NotFound";
 import MainLayout from "@/layouts/MainLayout";
 import SecondaryLayout from "@/layouts/SecondaryLayout";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import Home from "@/pages/Home";
+import NotFound from "@/pages/NotFound";
+import Product from "@/pages/Product";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const AppRouter: React.FC = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         {/* Home page with MainLayout */}
         <Route
@@ -40,7 +40,7 @@ const AppRouter: React.FC = () => {
         {/* NotFound page */}
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
