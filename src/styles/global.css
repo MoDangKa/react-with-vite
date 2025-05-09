@@ -1,6 +1,0 @@
-@import "tailwindcss";
-@import "./variables.css";
-
-#root {
-  min-height: 100vh;
-}
