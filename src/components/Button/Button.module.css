@@ -1,35 +1,13 @@
-/* Base Button Styling */
+@reference "@/assets/styles/global.css";
+
 .button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  @apply px-3 py-6 border-0 rounded-md transition-all text-white cursor-pointer disabled:bg-slate-400! disabled:cursor-not-allowed;
 
-/* Primary Button */
-.primary {
-  background-color: #4caf50;
-  color: white;
-}
+  &.primary {
+    @apply bg-green-500 hover:bg-green-600;
+  }
 
-.primary:hover {
-  background-color: #45a049;
-}
-
-/* Secondary Button */
-.secondary {
-  background-color: #008cba;
-  color: white;
-}
-
-.secondary:hover {
-  background-color: #007bb5;
-}
-
-/* Disabled Button */
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  &.secondary {
+    @apply bg-sky-500 hover:bg-sky-600;
+  }
 }
