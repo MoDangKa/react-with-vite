@@ -1,4 +1,4 @@
-import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
+import ToggleSwitchV2 from "@/components/ToggleSwitch/ToggleSwitchV2";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
@@ -12,7 +12,8 @@ const SecondaryLayout: React.FC<Props> = () => {
       {/* Header */}
       <header className="bg-sky-700 p-4 text-white flex justify-between items-center">
         <h1>Secondary Layout</h1>
-        <ToggleSwitch />
+
+        <ToggleSwitchV2 />
       </header>
 
       {/* Main Content */}
