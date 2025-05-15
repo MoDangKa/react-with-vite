@@ -1,7 +1,7 @@
 import { useTheme } from "@/contexts/ThemeContext";
 import styles from "./ToggleSwitch.module.css";
 
-export default function ToggleSwitch() {
+export default function ToggleSwitchV1() {
   const { theme, toggleTheme } = useTheme();
 
   return (
