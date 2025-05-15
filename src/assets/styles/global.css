@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "./variables.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+[data-theme="dark"] {
+  body {
+    color: var(--light);
+    background-color: var(--dark);
+  }
+}
+
+#root {
+  min-height: 100vh;
+}
