@@ -1,4 +1,4 @@
-import ToggleSwitch from "@/components/ToggleSwitch/ToggleSwitch";
+import ToggleSwitchV1 from "@/components/ToggleSwitch/ToggleSwitchV1";
 import { useTheme } from "@/contexts/ThemeContext";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi, Mock } from "vitest";
@@ -7,14 +7,14 @@ vi.mock("@/contexts/ThemeContext", () => ({
   useTheme: vi.fn(),
 }));
 
-describe("ToggleSwitch Component", () => {
+describe("ToggleSwitchV1 Component", () => {
   it("renders the toggle switch", () => {
     (useTheme as Mock).mockReturnValue({
       theme: "light",
       toggleTheme: vi.fn(),
     });
 
-    render(<ToggleSwitch />);
+    render(<ToggleSwitchV1 />);
 
     expect(screen.getByRole("checkbox")).toBeInTheDocument();
   });
@@ -26,7 +26,7 @@ describe("ToggleSwitch Component", () => {
       toggleTheme: toggleThemeMock,
     });
 
-    render(<ToggleSwitch />);
+    render(<ToggleSwitchV1 />);
 
     const checkbox = screen.getByRole("checkbox");
 
