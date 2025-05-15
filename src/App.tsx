@@ -1,12 +1,13 @@
-import ThemeProvider from "@/contexts/ThemeContext";
 import AppRouter from "@/routes/AppRouter";
+import store from "@/stores/store";
 import React from "react";
+import { Provider } from "react-redux";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider>
+    <Provider store={store}>
       <AppRouter />
-    </ThemeProvider>
+    </Provider>
   );
 };
 
