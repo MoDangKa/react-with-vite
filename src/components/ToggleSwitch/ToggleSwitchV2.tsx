@@ -7,13 +7,17 @@ export default function ToggleSwitchV2() {
   const theme = useSelector((state: RootState) => state.theme.theme);
   const dispatch = useDispatch<AppDispatch>();
 
+  const handleChange = () => {
+    dispatch(toggleTheme());
+  };
+
   return (
     <div className={styles["toggle-switch"]}>
       <label>
         <input
           type="checkbox"
           checked={theme === "light"}
-          onClick={() => dispatch(toggleTheme())}
+          onChange={handleChange}
         />
         <span className={styles.slider}></span>
       </label>
