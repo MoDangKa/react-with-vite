@@ -37,7 +37,7 @@ const LoginForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full min-w-[360px] p-8 space-y-6 bg-white rounded-lg shadow-md"
+      className="w-full max-w-[360px] p-8 space-y-6 bg-white rounded-lg shadow-md mx-4"
     >
       <h2 className="text-2xl font-bold text-center text-gray-800">
         Welcome Back
