@@ -1,6 +1,6 @@
+import BlankLayout from "@/layouts/BlankLayout";
 import MainLayout from "@/layouts/MainLayout";
 import SecondaryLayout from "@/layouts/SecondaryLayout";
-import BlankLayout from "@/layouts/ฺBlankLayout";
 import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
 import HomePage from "@/pages/HomePage";
