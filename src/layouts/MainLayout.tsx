@@ -1,10 +1,10 @@
-import React from "react";
+import { FC, ReactNode } from "react";
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
-const MainLayout: React.FC<Props> = ({ children }) => {
+const MainLayout: FC<Props> = ({ children }) => {
   return (
     <div className="container mx-auto min-h-screen flex flex-col">
       {/* Header */}
