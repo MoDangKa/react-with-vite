@@ -1,44 +1,56 @@
 import MainLayout from "@/layouts/MainLayout";
 import SecondaryLayout from "@/layouts/SecondaryLayout";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Home from "@/pages/Home";
-import NotFound from "@/pages/NotFound";
-import Product from "@/pages/Product";
-import React from "react";
+import BlankLayout from "@/layouts/ฺBlankLayout";
+import AboutPage from "@/pages/AboutPage";
+import ContactPage from "@/pages/ContactPage";
+import HomePage from "@/pages/HomePage";
+import LoginPage from "@/pages/LoginPage";
+import NotFoundPage from "@/pages/NotFoundPage";
+import ProductPage from "@/pages/ProductPage";
+import { FC, Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const AppRouter: React.FC = () => {
+const AppRouter: FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Home page with MainLayout */}
+        {/* HomePage page with MainLayout */}
         <Route
           path="/"
           element={
             <MainLayout>
-              <Home />
+              <HomePage />
             </MainLayout>
           }
         />
 
-        {/* About and Contact pages with SecondaryLayout */}
+        <Route
+          element={
+            <BlankLayout>
+              <Fragment />
+            </BlankLayout>
+          }
+        >
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
+
+        {/* AboutPage and ContactPage pages with SecondaryLayout */}
         <Route
           element={
             <SecondaryLayout>
-              <React.Fragment />
+              <Fragment />
             </SecondaryLayout>
           }
         >
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Route>
 
-        {/* Dynamic Product route */}
-        <Route path="/product/:type" element={<Product />} />
+        {/* Dynamic ProductPage route */}
+        <Route path="/product/:type" element={<ProductPage />} />
 
-        {/* NotFound page */}
-        <Route path="*" element={<NotFound />} />
+        {/* NotFoundPage page */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
