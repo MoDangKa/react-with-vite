@@ -1,12 +1,12 @@
 import ToggleSwitchV2 from "@/components/ToggleSwitch/ToggleSwitchV2";
-import React from "react";
+import { FC, ReactNode } from "react";
 import { Outlet } from "react-router-dom";
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
-const SecondaryLayout: React.FC<Props> = () => {
+const SecondaryLayout: FC<Props> = () => {
   return (
     <div className="container mx-auto min-h-screen flex flex-col">
       {/* Header */}
