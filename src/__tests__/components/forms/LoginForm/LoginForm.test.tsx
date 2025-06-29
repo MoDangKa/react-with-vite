@@ -26,21 +26,21 @@ describe("LoginForm Component", () => {
     });
   });
 
-//   it("displays validation error for invalid email format", async () => {
-//     render(<LoginForm />);
+  //   it("displays validation error for invalid email format", async () => {
+  //     render(<LoginForm />);
 
-//     fireEvent.input(screen.getByLabelText("Email"), {
-//       target: { value: "invalid-email" },
-//     });
+  //     fireEvent.input(screen.getByLabelText("Email"), {
+  //       target: { value: "invalid-email" },
+  //     });
 
-//     fireEvent.click(screen.getByRole("button", { name: "Sign in" }));
+  //     fireEvent.click(screen.getByRole("button", { name: "Sign in" }));
 
-//     await waitFor(() => {
-//       expect(
-//         screen.getByText("Please enter a valid email")
-//       ).toBeInTheDocument();
-//     });
-//   });
+  //     await waitFor(() => {
+  //       expect(
+  //         screen.getByText("Please enter a valid email")
+  //       ).toBeInTheDocument();
+  //     });
+  //   });
 
   it("displays validation error for short password", async () => {
     render(<LoginForm />);
@@ -88,23 +88,23 @@ describe("LoginForm Component", () => {
     vi.restoreAllMocks();
   });
 
-//   it("shows loading state during form submission", async () => {
-//     render(<LoginForm />);
+  //   it("shows loading state during form submission", async () => {
+  //     render(<LoginForm />);
 
-//     fireEvent.input(screen.getByLabelText("Email"), {
-//       target: { value: "test@example.com" },
-//     });
+  //     fireEvent.input(screen.getByLabelText("Email"), {
+  //       target: { value: "test@example.com" },
+  //     });
 
-//     fireEvent.input(screen.getByLabelText("Password"), {
-//       target: { value: "password123" },
-//     });
+  //     fireEvent.input(screen.getByLabelText("Password"), {
+  //       target: { value: "password123" },
+  //     });
 
-//     fireEvent.click(screen.getByRole("button", { name: "Sign in" }));
+  //     fireEvent.click(screen.getByRole("button", { name: "Sign in" }));
 
-//     expect(await screen.findByText("Processing...")).toBeInTheDocument();
+  //     expect(await screen.findByText("Processing...")).toBeInTheDocument();
 
-//     await waitFor(() => {
-//       expect(screen.queryByText("Processing...")).not.toBeInTheDocument();
-//     });
-//   });
+  //     await waitFor(() => {
+  //       expect(screen.queryByText("Processing...")).not.toBeInTheDocument();
+  //     });
+  //   });
 });

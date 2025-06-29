@@ -37,9 +37,9 @@ const LoginForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-full max-w-[360px] p-8 space-y-6 bg-white rounded-lg shadow-md mx-4"
+      className="mx-4 w-full max-w-[360px] space-y-6 rounded-lg bg-white p-8 shadow-md"
     >
-      <h2 className="text-2xl font-bold text-center text-gray-800">
+      <h2 className="text-center text-2xl font-bold text-gray-800">
         Welcome Back
       </h2>
 
@@ -54,9 +54,9 @@ const LoginForm: React.FC = () => {
           id="email"
           type="email"
           {...register("email")}
-          className={`mt-1 block w-full px-3 py-2 border text-slate-800 ${
+          className={`mt-1 block w-full border px-3 py-2 text-slate-800 ${
             errors.email ? "border-red-500" : "border-gray-300"
-          } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:${
+          } rounded-md shadow-sm focus:ring-2 focus:outline-none focus:${
             errors.email ? "ring-red-500" : "ring-blue-500"
           }`}
           placeholder="your@email.com"
@@ -77,9 +77,9 @@ const LoginForm: React.FC = () => {
           id="password"
           type="password"
           {...register("password")}
-          className={`mt-1 block w-full px-3 py-2 border text-slate-800 ${
+          className={`mt-1 block w-full border px-3 py-2 text-slate-800 ${
             errors.password ? "border-red-500" : "border-gray-300"
-          } rounded-md shadow-sm focus:outline-none focus:ring-2 focus:${
+          } rounded-md shadow-sm focus:ring-2 focus:outline-none focus:${
             errors.password ? "ring-red-500" : "ring-blue-500"
           }`}
           placeholder="••••••••"
@@ -93,14 +93,14 @@ const LoginForm: React.FC = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+          className={`flex w-full justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white shadow-sm ${
             isSubmitting ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"
-          } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+          } focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none`}
         >
           {isSubmitting ? (
             <>
               <svg
-                className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                className="mr-2 -ml-1 h-4 w-4 animate-spin text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
