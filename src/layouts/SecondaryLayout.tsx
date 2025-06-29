@@ -8,9 +8,9 @@ type Props = {
 
 const SecondaryLayout: FC<Props> = () => {
   return (
-    <div className="container mx-auto min-h-screen flex flex-col">
+    <div className="container mx-auto flex min-h-screen flex-col">
       {/* Header */}
-      <header className="bg-sky-700 p-4 text-white flex justify-between items-center">
+      <header className="flex items-center justify-between bg-sky-700 p-4 text-white">
         <h1>Secondary Layout</h1>
 
         <ToggleSwitchV2 />
@@ -22,7 +22,7 @@ const SecondaryLayout: FC<Props> = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-sky-700 p-2 text-white mt-4">
+      <footer className="mt-4 bg-sky-700 p-2 text-white">
         <p>&copy; 2025 Another Layout Footer</p>
       </footer>
     </div>

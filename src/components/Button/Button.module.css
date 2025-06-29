@@ -1,7 +1,7 @@
 @reference "@/assets/styles/global.css";
 
 .button {
-  @apply px-3 py-6 border-0 rounded-md transition-all text-white cursor-pointer disabled:bg-slate-400! disabled:cursor-not-allowed;
+  @apply cursor-pointer rounded-md border-0 px-3 py-6 text-white transition-all disabled:cursor-not-allowed disabled:bg-slate-400!;
 
   &.primary {
     @apply bg-green-500 hover:bg-green-600;
