@@ -1,12 +1,11 @@
 import ToggleSwitchV2 from "@/components/ToggleSwitch/ToggleSwitchV2";
 import { FC, ReactNode } from "react";
-import { Outlet } from "react-router-dom";
 
 type Props = {
   children: ReactNode;
 };
 
-const SecondaryLayout: FC<Props> = () => {
+const SecondaryLayout: FC<Props> = ({ children }) => {
   return (
     <div className="container mx-auto flex min-h-screen flex-col">
       {/* Header */}
@@ -17,9 +16,7 @@ const SecondaryLayout: FC<Props> = () => {
       </header>
 
       {/* Main Content */}
-      <main className="grow p-4">
-        <Outlet />
-      </main>
+      <main className="grow p-4">{children}</main>
 
       {/* Footer */}
       <footer className="mt-4 bg-sky-700 p-2 text-white">
