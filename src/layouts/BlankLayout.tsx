@@ -1,14 +1,13 @@
 import { FC, ReactNode } from "react";
-import { Outlet } from "react-router-dom";
 
 type Props = {
   children: ReactNode;
 };
 
-const BlankLayout: FC<Props> = () => {
+const BlankLayout: FC<Props> = ({ children }) => {
   return (
     <main className="flex min-h-screen items-center justify-center">
-      <Outlet />
+      {children}
     </main>
   );
 };
